@@ -1,0 +1,34 @@
+/* Default styles for larger screens */
+.campus {
+    margin: 120px 68.5px 173px 68.5px;
+    width: 90%;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.gallery img {
+    width: 23%;
+    border-radius: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .campus {
+        margin: 60px 20px;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+    .gallery img {
+        width: calc(50% - 10px); /* Adjusted width for four images per row */
+        margin-bottom: 20px;
+    }
+}

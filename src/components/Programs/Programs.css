@@ -1,0 +1,61 @@
+.Programs {
+    margin: 80px 10px; /* Changed margin values */
+    width: 80%; /* Changed width to 80% */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto; /* Align container to the center horizontally */
+    margin-right: auto; /* Align container to the center horizontally */
+}
+
+.Program {
+    flex-basis: calc(31% - 10px); /* Ensure items fit within the container */
+    margin-bottom: 20px; /* Space between rows */
+    height: 500px; /* Set a fixed height for consistency */
+    overflow: hidden; /* Ensures images don't overflow their containers */
+    position: relative;
+}
+
+.Program img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
+    display: block;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s; /* Simplified transition */
+}
+
+.caption img {
+    width: 50px; /* Adjust the size as needed */
+    height: 60px; /* Ensures the icon maintains a consistent size */
+    display: block; /* Ensures it's treated as a block element */
+    margin-bottom: 10px; /* Example margin for spacing */
+}
+
+.Program:hover .caption {
+    opacity: 1;
+}

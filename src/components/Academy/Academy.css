@@ -1,0 +1,32 @@
+.academy {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .video-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure videos wrap correctly on smaller screens */
+    margin-top: 20px;
+  }
+  
+  .video-wrapper {
+    width: calc(33.33% - 10px); /* Adjust width as per your design */
+    margin-bottom: 20px; /* Add margin bottom for spacing between rows */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .video-wrapper:last-child {
+    margin-right: 0;
+  }
+  
+  .video-wrapper > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
